@@ -2,9 +2,12 @@
  --blue: #8BC6EC;
  --purple: #9599E2;
  --darker-blue: #53768d;
- --light-blue: #dcedf9;
+ /* --light-blue: #dcedf9; */
+ --light-blue: #f3f9fd;
  --green: #96ec8b;
  --darker-green: #78bc6f;
+ /* --font-color: #293b46; */
+ --font-color: #374f5e;
  --width: 3px;
 }
 
@@ -44,13 +47,13 @@ form {
 }
 
 h1{
-  color: #1b272f;
+  color: var(--font-color);
 }
 
 .todo-input{
   width: 80%;
   border-radius: 6px;
-  color: #1b272f;
+  color: var(--font-color);
 
   /* background-color: var(--light-blue); */
 }
@@ -70,17 +73,21 @@ transition: all 0.3s ease;
 border-radius: 6px;
 }
 
-.todo-button:focus, .todo-input:focus {
-  /* background: var(--blue); */
-  /* color: white; */
-/* outline: 3px solid var(--darker-blue);  */
-  /* border: 3px solid white; */
-  border: var(--width) solid var(--darker-blue);
-  outline: none;
+.todo-input:focus {
+  border: var(--width) solid white;
+  outline: var(--width) solid var(--darker-blue);
+  background: var(--light-blue);
+}
+
+.todo-button:focus {
+  border: var(--width) solid white;
+  color: white;
+  outline: var(--width) solid var(--darker-blue);
+  background: var(--blue);
 }
 
 .todo-button:hover {
-background: var(--blue);
+background: var(--darker-blue);
 color: white;
 }
 
@@ -100,7 +107,7 @@ color: white;
   margin: 1rem 0;
   padding: 0.5rem 1rem;
   background: white;
-  color: black;
+  color: var(--font-color);
   font-size: 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -109,7 +116,7 @@ color: white;
 }
 .todo li{
   flex: 1;
-  color: #1b272f;
+  color: var(--font-color);
   
 }
 
@@ -117,7 +124,7 @@ color: white;
   color: white;
   border: 2px solid white;
   padding: 1rem;
-  /* margin: 0 1rem; */
+  
   border-radius: 6px;
   cursor: pointer;
   font-size: 1.2rem;
