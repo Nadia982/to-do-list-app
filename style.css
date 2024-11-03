@@ -1,8 +1,10 @@
 :root{
  --blue: #8BC6EC;
  --purple: #9599E2;
- --darker-blue: #618AA5;
+ --darker-blue: #53768d;
  --light-blue: #dcedf9;
+ --green: #96ec8b;
+ --darker-green: #78bc6f;
 }
 
 * {
@@ -40,10 +42,15 @@ form {
   gap: 1rem;
 }
 
+h1{
+  color: #1b272f;
+}
+
 .todo-input{
   width: 80%;
   border-radius: 6px;
-  
+  color: #1b272f;
+
   /* background-color: var(--light-blue); */
 }
 
@@ -51,7 +58,6 @@ form {
 .todo-button {
   padding: .7rem;
   font-size: 2rem;
-  
   border: 4px solid var(--blue);
 }
 
@@ -101,25 +107,40 @@ color: white;
 }
 .todo li{
   flex: 1;
+  color: #1b272f;
 }
 
 .trash-btn, .complete-btn{
-  background: var(--blue);
   color: white;
   border: 2px solid white;
   padding: 1rem;
   /* margin: 0 1rem; */
   border-radius: 6px;
   cursor: pointer;
+  font-size: 1.2rem;
+}
+.trash-btn{
+  background: var(--blue);
 }
 
-.trash-btn:focus, .complete-btn:focus{
+.complete-btn{
+  background-color: var(--green);
+}
+.trash-btn:focus{
   outline: 4px solid var(--darker-blue);
 }
+.complete-btn:focus{
+  outline: 4px solid var(--darker-green);
+}
 
-.trash-btn:hover, .complete-btn:hover{
+.trash-btn:hover{
   background: var(--darker-blue);
 }
+
+.complete-btn:hover{
+  background: var(--darker-green);
+}
+
 
 
 
