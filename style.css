@@ -1,3 +1,10 @@
+:root{
+ --blue: #8BC6EC;
+ --purple: #9599E2;
+ --darker-blue: #618AA5;
+ --light-blue: #dcedf9;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +13,7 @@
 
 body {
     background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+    background-image: linear-gradient(135deg, var(--blue) 0%, var(--purple) 100%);
   font-family: “Poppins”, sans-serif;
   min-height: 100vh;
 }
@@ -23,31 +30,99 @@ form {
   align-items: center;
 }
 
+form {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  gap: 1rem;
+}
+
 .todo-input{
-  border-radius: 6px 0 0 6px;
+  width: 80%;
+  border-radius: 6px;
+  
+  /* background-color: var(--light-blue); */
 }
 
 .todo-input,
 .todo-button {
-  padding: 0.5rem;
+  padding: .7rem;
   font-size: 2rem;
-  border: none;
-  background: white;
+  
+  border: 4px solid var(--blue);
 }
 
 .todo-button {
-color: #8BC6EC;
+color: var(--blue);
 background: white;
 cursor: pointer;
 transition: all 0.3s ease;
-border-radius: 0 6px 6px 0;
+border-radius: 6px;
+}
+
+.todo-button:focus, .todo-input:focus {
+  /* background: var(--blue); */
+  /* color: white; */
+/* outline: 3px solid var(--darker-blue);  */
+  /* border: 3px solid white; */
+  border: 4px solid var(--darker-blue);
+  outline: none;
 }
 
 .todo-button:hover {
-background: #8BC6EC;
+background: var(--darker-blue);
 color: white;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-list {
+  min-width: 30%;
+  list-style: none;
+}
+
+.todo{
+  margin: 0.5rem;
+  padding: 0.5rem;
+  background: white;
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+}
+.todo li{
+  flex: 1;
+}
+
+.trash-btn, .complete-btn{
+  background: var(--blue);
+  color: white;
+  border: 2px solid white;
+  padding: 1rem;
+  /* margin: 0 1rem; */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.trash-btn:focus, .complete-btn:focus{
+  outline: 4px solid var(--darker-blue);
+}
+
+.trash-btn:hover, .complete-btn:hover{
+  background: var(--darker-blue);
 }
 
 
 
-
+.complete-btn{
+  margin-right: 12px;
+}
