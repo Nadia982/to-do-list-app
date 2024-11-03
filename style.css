@@ -5,6 +5,7 @@
  --light-blue: #dcedf9;
  --green: #96ec8b;
  --darker-green: #78bc6f;
+ --width: 3px;
 }
 
 * {
@@ -37,7 +38,7 @@ form {
   max-width: 500px;
   margin: 0 auto;
   background: white;
-  padding: 2rem;
+  /* padding: 2rem; */
   border-radius: 12px;
   gap: 1rem;
 }
@@ -58,7 +59,7 @@ h1{
 .todo-button {
   padding: .7rem;
   font-size: 2rem;
-  border: 4px solid var(--blue);
+  border: var(--width) solid var(--blue);
 }
 
 .todo-button {
@@ -74,12 +75,12 @@ border-radius: 6px;
   /* color: white; */
 /* outline: 3px solid var(--darker-blue);  */
   /* border: 3px solid white; */
-  border: 4px solid var(--darker-blue);
+  border: var(--width) solid var(--darker-blue);
   outline: none;
 }
 
 .todo-button:hover {
-background: var(--darker-blue);
+background: var(--blue);
 color: white;
 }
 
@@ -90,13 +91,14 @@ color: white;
 }
 
 .todo-list {
-  min-width: 30%;
+  width: 90%;
+  max-width: 500px;
   list-style: none;
 }
 
 .todo{
-  margin: 0.5rem;
-  padding: 0.5rem;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
   background: white;
   color: black;
   font-size: 1.5rem;
@@ -108,6 +110,7 @@ color: white;
 .todo li{
   flex: 1;
   color: #1b272f;
+  
 }
 
 .trash-btn, .complete-btn{
@@ -127,10 +130,10 @@ color: white;
   background-color: var(--green);
 }
 .trash-btn:focus{
-  outline: 4px solid var(--darker-blue);
+  outline: var(--width) solid var(--darker-blue);
 }
 .complete-btn:focus{
-  outline: 4px solid var(--darker-green);
+  outline: var(--width) solid var(--darker-green);
 }
 
 .trash-btn:hover{
