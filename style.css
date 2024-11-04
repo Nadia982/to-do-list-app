@@ -54,8 +54,6 @@ h1{
   width: 80%;
   border-radius: 6px;
   color: var(--font-color);
-
-  /* background-color: var(--light-blue); */
 }
 
 .todo-input,
@@ -76,7 +74,7 @@ border-radius: 6px;
 .todo-input:focus {
   border: var(--width) solid white;
   outline: var(--width) solid var(--darker-blue);
-  background: var(--light-blue);
+  
 }
 
 .todo-button:focus {
@@ -151,9 +149,10 @@ color: white;
   background: var(--darker-green);
 }
 
-
-
-
 .complete-btn{
   margin-right: 12px;
+}
+
+.fa-trash, .fa-check{
+  pointer-events: none;
 }
